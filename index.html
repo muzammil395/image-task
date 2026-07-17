@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Exhibit — Image Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header>
+  <p class="eyebrow"> Curated Collection</p>
+  <h1>The <em>Exhibit</em></h1>
+  <p class="sub">A small gallery of frames worth stopping for — nature, machines, wild things, and the cities that hold them. Tap any piece to step into the frame.</p>
+</header>
+ 
+<div class="filter-bar" id="filterBar">
+  <button class="filter-btn active" data-filter="all">All Works</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+  <button class="filter-btn" data-filter="animals">Animals</button>
+  <button class="filter-btn" data-filter="cars">Cars</button>
+  <button class="filter-btn" data-filter="architecture">Architecture</button>
+  <button class="filter-btn" data-filter="travel">Travel</button>
+  <span class="filter-count" id="filterCount"></span>
+</div>
+ 
+<main class="gallery" id="gallery"></main>
+ 
+<footer>THE EXHIBIT — A GALLERY DEMO — CRAFTED WITH HTML · CSS · JS</footer>
+ 
+<div class="lightbox" id="lightbox">
+  <div class="lb-stage">
+    <button class="lb-close" id="lbClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="">
+    </div>
+    <div class="lb-caption">
+      <span class="title" id="lbTitle"></span>
+      <span class="dot">•</span>
+      <span id="lbCat"></span>
+      <span class="dot">•</span>
+      <span class="lb-progress" id="lbProgress"></span>
+    </div>
+    <button class="lb-next" id="lbNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
